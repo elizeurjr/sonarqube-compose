@@ -9,6 +9,7 @@ services:
       SONAR_JDBC_URL: jdbc:postgresql://db:5432/sonar
       SONAR_JDBC_USERNAME: sonar
       SONAR_JDBC_PASSWORD: sonar
+    #o comando abaixo é referente a issue https://sonarsource.atlassian.net/browse/SONAR-13997    
     command: ["./bin/run.sh", "-Dsonar.es.bootstrap.checks.disable=true"]
     volumes:
       - sonarqube_data:/opt/sonarqube/data
